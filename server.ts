@@ -1,8 +1,7 @@
 import * as EnviromentConfig from './environment';
 const redbird = require('redbird');
 
-var secure: boolean = EnviromentConfig.getCurrentEnvironment() !== EnviromentConfig.development &&
-  EnviromentConfig.getCurrentEnvironment() !== EnviromentConfig.tests;
+var secure: boolean = EnviromentConfig.getCurrentEnvironment() !== EnviromentConfig.development;
 
 console.log('Using secure https: ' + secure);
 
@@ -16,5 +15,5 @@ var redbirdServer = new redbird({
   }
 });
 
-redbirdServer.register('localhost', 'https://127.0.0.1:8020', { ssl: true });
-redbirdServer.register('localhost/api', 'https://127.0.0.1:8021', { ssl: true });
+redbirdServer.register(EnviromentConfig.getCurrentEnvironment().appConfig.host, EnviromentConfig.getCurrentEnvironment().redirectConfig.applicationServerUrl, { ssl: true });
+redbirdServer.register(EnviromentConfig.getCurrentEnvironment().appConfig.host + '/api', EnviromentConfig.getCurrentEnvironment().redirectConfig.serverUrl, { ssl: true });
