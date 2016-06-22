@@ -1,9 +1,14 @@
 import * as EnviromentConfig from './environment';
 const redbird = require('redbird');
 
+var secure: boolean = EnviromentConfig.getCurrentEnvironment() !== EnviromentConfig.development &&
+  EnviromentConfig.getCurrentEnvironment() !== EnviromentConfig.tests;
+
+console.log('Using secure https: ' + secure);
+
 var redbirdServer = new redbird({
   port: 8080,
-  secure: false,
+  secure: secure,
   ssl: {
     port: EnviromentConfig.getCurrentEnvironment().appConfig.port,
     key: EnviromentConfig.getCurrentEnvironment().appConfig.certificate.keyFilePath,
