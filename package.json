@@ -1,0 +1,18 @@
+{
+  "name": "skills-reverse-proxy",
+  "version": "1.0.0",
+  "description": "A reverse proxy for skills application and server",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavik57/skills-reverse-proxy.git"
+  },
+  "author": "Slava Shpitalny <slavik57@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slavik57/skills-reverse-proxy/issues"
+  },
+  "homepage": "https://github.com/slavik57/skills-reverse-proxy#readme"
+}
