@@ -4,6 +4,7 @@
   "description": "A reverse proxy for skills application and server",
   "main": "index.js",
   "scripts": {
+    "start": "set NODE_ENV=development&& node server.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/slavik57/skills-reverse-proxy/issues"
   },
-  "homepage": "https://github.com/slavik57/skills-reverse-proxy#readme"
+  "homepage": "https://github.com/slavik57/skills-reverse-proxy#readme",
+  "dependencies": {
+    "redbird": "^0.4.15"
+  }
 }
