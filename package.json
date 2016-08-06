@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/slavik57/skills-reverse-proxy#readme",
   "dependencies": {
-    "redbird": "^0.4.15"
+    "redbird": "^0.5.4"
   }
 }
